@@ -3,8 +3,11 @@ pub mod part1;
 pub mod part2;
 
 use crate::{Output, Part};
-
-pub type Input = u8;
+pub struct Data {
+    op: i32,
+    me: i32,
+}
+pub type Input = Vec<Data>;
 
 pub fn run(part: Part) -> Output {
     let input = input::read();
