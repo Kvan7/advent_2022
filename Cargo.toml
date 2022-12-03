@@ -14,6 +14,7 @@ name = "aoc2022bin"
 path = "src/bin.rs"
 
 [dependencies]
+aoc-parse = "0.1.2"
 # reqwest = {version="0.11.13", features=["blocking", "cookies"]}
 clap = { version = "4.0.22", features = ["derive"] }
 criterion = "0.4.0"
