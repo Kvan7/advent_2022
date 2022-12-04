@@ -4,7 +4,17 @@ pub mod part2;
 
 use crate::{Output, Part};
 
-pub type Input = u8;
+pub struct Elf {
+    start: u32,
+    end: u32,
+}
+
+pub struct Grp {
+    one: Elf,
+    two: Elf,
+}
+
+pub type Input = Vec<Grp>;
 
 pub fn run(part: Part) -> Output {
     let input = input::read();
