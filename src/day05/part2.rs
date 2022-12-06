@@ -23,7 +23,10 @@ pub fn solve(input: &Input) -> Output {
         //     temp_vec, stacks
         // );
     }
-    println!("{:?}", stacks);
+    let mut ans = String::new();
+    for i in 0..stacks.len() {
+        ans.push(stacks[i].pop().unwrap_or_default());
+    }
 
-    unimplemented!()
+    ans.into()
 }
