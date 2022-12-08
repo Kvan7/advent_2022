@@ -4,7 +4,13 @@ pub mod part2;
 
 use crate::{Output, Part};
 
-pub type Input = u8;
+pub struct Data {
+    name: String,
+    size: u32,
+    parent: String,
+}
+
+pub type Input = Vec<Data>;
 
 pub fn run(part: Part) -> Output {
     let input = input::read();
