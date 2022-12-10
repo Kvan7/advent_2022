@@ -4,7 +4,19 @@ pub mod part2;
 
 use crate::{Output, Part};
 
-pub type Input = u8;
+#[derive(PartialEq)]
+pub enum Inst {
+    NOOP,
+    ADDX,
+}
+
+pub struct Data {
+    cycles: usize,
+    instruction: Inst,
+    value: i32,
+}
+
+pub type Input = Vec<Data>;
 
 pub fn run(part: Part) -> Output {
     let input = input::read();
