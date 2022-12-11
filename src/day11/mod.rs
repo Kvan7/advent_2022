@@ -4,7 +4,28 @@ pub mod part2;
 
 use crate::{Output, Part};
 
-pub type Input = u8;
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub enum Op {
+    Add,
+    Multiply,
+    Power,
+}
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
+pub struct Oper {
+    operation: Op,
+    adden: u128,
+}
+#[derive(Debug, PartialEq, Eq, Clone)]
+pub struct Data {
+    id: u32,
+    items: Vec<u128>,
+    operation: Oper,
+    test: u128,
+    test_true: u32,
+    test_false: u32,
+}
+
+pub type Input = Vec<Data>;
 
 pub fn run(part: Part) -> Output {
     let input = input::read();
