@@ -4,7 +4,15 @@ pub mod part2;
 
 use crate::{Output, Part};
 
-pub type Input = u8;
+pub enum Ty {
+    A,
+}
+
+pub struct Data {
+    d: u32,
+}
+
+pub type Input = Vec<Vec<char>>;
 
 pub fn run(part: Part) -> Output {
     let input = input::read();
